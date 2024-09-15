@@ -1,9 +1,9 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-	"main": "server.js",
+  "main": "server.js",
   "scripts": {
-		"server": "nodemon back-end/server.js"
+    "server": "nodemon back-end/server.js"
   },
   "type": "module",
   "keywords": [],

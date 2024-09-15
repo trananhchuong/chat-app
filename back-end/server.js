@@ -7,8 +7,7 @@ import userRoutes from "./routes/user.routes.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import cookieParser from "cookie-parser";
-
-const app = express();
+import { app, server } from "./socket/socket.js";
 
 dotenv.config();
 
@@ -26,7 +25,7 @@ app.get("/", (req, res) => {
   console.log("🚀 ~ app.get ~ Hello World!");
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   connectToMongoDB();
   console.log(`Server Running on port ${PORT}`);
 });
